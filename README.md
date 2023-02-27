@@ -1,4 +1,6 @@
 # cooperative-competitiveL
+
+
 This code is an implementation of a cooperative-competitive learning algorithm for two neurons. The purpose of this algorithm is to train two neurons to learn to classify input data into two classes.
 
 The code starts by initializing the weights of the two neurons randomly, and creating a matrix of the same size to store the updates to the weights. It then sets the axes limits of the plot window to be between 0 and 3, initializes the learning rate and other variables, and prompts the user to input the number of iterations to perform.
@@ -12,3 +14,5 @@ The code then updates the weights of the winning neuron based on the difference 
 The code then exits the for loop and enters an if statement that checks whether the maximum number of iterations has been reached. If so, it breaks out of the while loop. Otherwise, it increments the iteration counter and continues to the next iteration.
 
 Once the while loop has exited, the final weights of the two neurons are plotted as a cross and a circle, and a new figure is created to plot the evolution of the RMSE over time.
+
+![cooperativo](https://user-images.githubusercontent.com/97995445/221579857-355c4e34-4284-4259-b317-232db6a2f1bb.png)
