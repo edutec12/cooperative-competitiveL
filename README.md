@@ -1,18 +1,10 @@
 # cooperative-competitiveL
 
 
-This code is an implementation of a cooperative-competitive learning algorithm for two neurons. The purpose of this algorithm is to train two neurons to learn to classify input data into two classes.
+This code implements a cooperative-competitive learning algorithm designed for two neurons. The goal of the algorithm is to train neurons to classify input data. First, the code initializes the neurons' weights randomly and sets the axes. A matrix is created for updates, and the learning rate is set. It prompts the user for the number of iterations to perform next. The while loop runs until the RMSE between neurons' weights drops below 0.01.
 
-The code starts by initializing the weights of the two neurons randomly, and creating a matrix of the same size to store the updates to the weights. It then sets the axes limits of the plot window to be between 0 and 3, initializes the learning rate and other variables, and prompts the user to input the number of iterations to perform.
+Inside, a for loop performs 100 iterations for each data point. A point is randomly selected, plotted as green or red, and processed. The input vector and weight vectors calculate each neuron's activation. Feature maps are updated to define regions most sensitive for each neuron. This process continues based on the activation of the winning neuron. The weight update for the winner occurs next, represented by a plotted line. The RMSE is calculated between neurons, and values are stored for later plotting. If the RMSE exceeds 1.3, weights are reset to random values.
 
-The code then enters a while loop that continues until the root-mean-square error (RMSE) between the weights of the two neurons drops below a threshold value of 0.01. Inside this while loop, there is a for loop that performs 100 iterations of the algorithm for each data point.
-
-For each data point, the code randomly selects a point and plots it as a green or red dot. It then calculates the dot product of the input vector and the weight vectors, and uses this to calculate the activation of each neuron. It then updates the feature maps for each neuron, which help to define the regions of input space where each neuron is most sensitive. These feature maps are updated based on the activation of the winning neuron.
-
-The code then updates the weights of the winning neuron based on the difference between the input vector and the weight vector, and updates the plot with a line representing this weight update. It then calculates the RMSE between the weights of the two neurons, and stores this value along with the iteration number in arrays for plotting later. If the RMSE is above a threshold value of 1.3, the weights are reset to random values.
-
-The code then exits the for loop and enters an if statement that checks whether the maximum number of iterations has been reached. If so, it breaks out of the while loop. Otherwise, it increments the iteration counter and continues to the next iteration.
-
-Once the while loop has exited, the final weights of the two neurons are plotted as a cross and a circle, and a new figure is created to plot the evolution of the RMSE over time.
+The loop exits if the maximum iteration count is reached; otherwise, it continues. When the while loop ends, the final weights are plotted, and the RMSE's evolution is displayed in a new figure.
 
 ![cooperativo](https://user-images.githubusercontent.com/97995445/221579857-355c4e34-4284-4259-b317-232db6a2f1bb.png)
